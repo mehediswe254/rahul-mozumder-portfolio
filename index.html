@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Rahul Mozumder — Software Engineering student at Daffodil International University. Explore web development, ideas, skills and contact details.">
+  <title>Rahul Mozumder — Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+  :root{--night:#101827;--night2:#192438;--paper:#f6f5f0;--mint:#b8ff67;--blue:#a7d3ff;--ink:#202736;--muted:#636c78;--border:#dedfd9;--heading:'Space Grotesk',system-ui,sans-serif;--body:'DM Sans',system-ui,sans-serif}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--body);overflow-x:hidden}
+  button,a{font:inherit}a{text-decoration:none;color:inherit}button{cursor:pointer}img{max-width:100%;display:block}
+  ::selection{background:var(--mint);color:var(--night)}
+  :focus-visible{outline:3px solid #4a9bff;outline-offset:4px}
+  .container{width:min(1170px,calc(100% - 42px));margin:auto}
+  .site-header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(16,24,39,.92);color:#fff;backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.1)}
+  .navline{height:75px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+  .brand{font:700 21px var(--heading);letter-spacing:-1px;white-space:nowrap}
+  .brand .dot{color:var(--mint)}
+  .navlinks{display:flex;gap:30px;align-items:center}
+  .navlinks>a{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:#d2d9e5;transition:color .2s}
+  .navlinks>a:hover{color:var(--mint)}
+  .navlinks .nav-contact{padding:10px 18px;border:1px solid rgba(184,255,103,.6);border-radius:5px;color:var(--mint)}
+  .menu-btn{display:none;border:1px solid #475366;color:#fff;background:transparent;width:43px;height:43px;border-radius:7px;font-size:22px;align-items:center;justify-content:center}
+  .hero{padding:145px 0 82px;background:var(--night);color:#fff;min-height:710px;position:relative;isolation:isolate;overflow:hidden}
+  .hero:before{content:"";position:absolute;right:-180px;top:-210px;width:650px;height:650px;border:1px solid rgba(255,255,255,.08);border-radius:50%;box-shadow:0 0 0 70px rgba(255,255,255,.025),0 0 0 150px rgba(255,255,255,.016);z-index:-1}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:7%;align-items:center}
+  .intro{display:flex;align-items:center;gap:11px;color:var(--mint);font:700 13px var(--heading);letter-spacing:2px;text-transform:uppercase;margin-bottom:26px}
+  .intro:before{content:"";width:27px;height:2px;background:var(--mint)}
+  h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:var(--heading)}
+  h1{font-size:clamp(4.2rem,8.2vw,8.1rem);font-weight:700;line-height:.95;letter-spacing:-.085em;margin-bottom:26px}
+  h1 .last{display:block;color:var(--mint)}
+  .hero-copy{max-width:510px;color:#b9c6d8;font-size:18px;line-height:1.9}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+  .button{border:1px solid transparent;border-radius:5px;min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:0 23px;font-weight:700;font-size:14px;transition:transform .2s,background .2s}
+  .button:hover{transform:translateY(-3px)}
+  .button-solid{background:var(--mint);color:var(--night)}
+  .button-outline{border-color:#647185;color:#fff}
+  .hero-frame{position:relative;width:min(100%,465px);justify-self:end}
+  .photo-back{position:absolute;top:22px;right:-23px;bottom:-22px;left:23px;border:1px solid var(--mint);border-radius:0 120px 0 0}
+  .profile-img{width:100%;height:505px;object-fit:cover;object-position:center 39%;border-radius:0 120px 0 0;filter:saturate(.86);position:relative}
+  .photo-stamp{position:absolute;left:-25px;bottom:35px;background:var(--mint);color:var(--night);padding:16px 22px;font:700 14px var(--heading);box-shadow:10px 10px 0 rgba(0,0,0,.23)}
+  .scroll-note{display:flex;align-items:center;gap:15px;margin-top:63px;text-transform:uppercase;color:#98a5b8;font:500 11px var(--heading);letter-spacing:2px}
+  .scroll-note:before{content:"";width:54px;height:1px;background:#98a5b8}
+  .marquee{background:var(--mint);color:var(--night);overflow:hidden;border-bottom:1px solid #93c654}
+  .marquee-inner{display:flex;justify-content:space-between;gap:22px;align-items:center;min-height:63px;font:700 13px var(--heading);letter-spacing:1.1px;text-transform:uppercase}
+  .marquee b{font-size:20px}
+  .section{padding:105px 0}
+  .section-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:43px}
+  .eyebrow{font:700 12px var(--heading);letter-spacing:2px;text-transform:uppercase;color:#39704a;margin:0 0 12px}
+  h2{font-size:clamp(2.3rem,4.7vw,4.1rem);line-height:1.1;letter-spacing:-.06em;margin:0}
+  .subtext{color:var(--muted);max-width:410px;font-size:15px;margin:0}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+  .about-copy>p{font-size:18px;line-height:1.95;color:#485160}
+  .about-sign{font:700 22px var(--heading);letter-spacing:-1.5px;margin-top:27px}
+  .fact-list{border-top:1px solid var(--border)}
+  .fact-row{display:grid;grid-template-columns:145px 1fr;gap:15px;padding:22px 0;border-bottom:1px solid var(--border);font-size:15px}
+  .fact-row span{color:#6c7380}.fact-row strong{font-weight:700}
+  .skills{background:#e9edf0}
+  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+  .skill-card{background:#fff;border:1px solid #dce1e5;padding:32px;min-height:248px;transition:transform .2s}
+  .skill-card:hover{transform:translateY(-5px)}
+  .skill-icon{font:700 26px var(--heading);color:#3b7f4b;margin-bottom:24px}
+  .skill-card h3{font-size:22px;letter-spacing:-1px;margin-bottom:10px}
+  .skill-card p{font-size:14px;color:var(--muted);margin-bottom:17px}
+  .skill-tags{display:flex;gap:7px;flex-wrap:wrap}
+  .skill-tags span{font-size:12px;background:#f0f3f1;padding:5px 9px;border:1px solid #e6eae7}
+  .projects-section{background:#fff}
+  .filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+  .filter-btn{border:1px solid #d9e0e4;background:transparent;padding:9px 15px;font-size:13px;border-radius:4px;font-weight:700;transition:all .2s}
+  .filter-btn.active,.filter-btn:hover{background:var(--night);color:var(--mint);border-color:var(--night)}
+  .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  .project{border:1px solid #e0e4e6;background:#f8f9f7;overflow:hidden;display:flex;flex-direction:column}
+  .project[hidden]{display:none}
+  .project-art{height:237px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .project-art span{font:700 clamp(70px,10vw,120px)/1 var(--heading);letter-spacing:-.12em;opacity:.26;transform:rotate(-12deg);transition:transform .3s}
+  .project:hover .project-art span{transform:rotate(0) scale(1.1)}
+  .project-art:before{content:"";position:absolute;width:280px;height:280px;border:2px solid rgba(255,255,255,.25);border-radius:50%;top:-155px;right:-50px}
+  .art-a{background:#badab1;color:#183f2f}.art-b{background:#d6cdf5;color:#4b3d90}.art-c{background:#c4dafa;color:#1c4784}.art-d{background:#f8d9ba;color:#98602b}
+  .art-e{background:#edc4d8;color:#853952}.art-f{background:#c6dfdb;color:#2f625c}
+  .project-index{position:absolute;top:18px;left:22px;font:700 12px var(--heading);letter-spacing:2px;color:#1b2c33}
+  .project-body{padding:27px 28px 29px;flex:1}
+  .project-heading{display:flex;justify-content:space-between;align-items:start;gap:16px}
+  .project h3{font-size:25px;letter-spacing:-1.2px;line-height:1.2;margin:0 0 12px}
+  .project-arrow{font-size:22px}
+  .project p{color:#596270;font-size:14px;line-height:1.85;margin-bottom:18px}
+  .project-kinds{display:flex;gap:8px;flex-wrap:wrap}
+  .project-kinds span{font-size:11px;text-transform:uppercase;letter-spacing:1px;font-weight:700;color:#51606b;border-top:1px solid #bfc7c8;padding-top:7px}
+  .note{font-size:13px;color:#67717d;margin:24px 0 0}
+  .journey{background:var(--night);color:#fff}
+  .journey .eyebrow{color:var(--mint)}.journey .subtext{color:#acb9cb}
+  .timeline{border-top:1px solid #3b4758}
+  .timeline-item{display:grid;grid-template-columns:160px 1fr;gap:30px;padding:35px 0;border-bottom:1px solid #3b4758}
+  .timeline-date{color:var(--mint);font:600 13px var(--heading);letter-spacing:1px}
+  .timeline h3{font-size:24px;letter-spacing:-.8px;margin-bottom:8px}
+  .timeline p{color:#b6c1ce;margin-bottom:0;max-width:710px}
+  .contact{background:var(--mint);padding:105px 0}
+  .contact-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:end}
+  .contact .eyebrow{color:#42622b}
+  .contact h2{font-size:clamp(3.2rem,7vw,6.8rem);letter-spacing:-.09em;line-height:.99;margin-bottom:20px}
+  .contact p{font-size:17px;max-width:550px;margin-bottom:0}
+  .contact-links{display:grid;gap:12px}
+  .contact-link{background:#111c2a;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:21px 22px;min-width:0;transition:transform .2s}
+  .contact-link:hover{transform:translateX(-5px)}
+  .contact-link small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:#b8ff67;margin-bottom:5px}
+  .contact-link strong{font-size:16px;overflow-wrap:anywhere}.contact-link b{font-size:25px}
+  footer{background:#101827;color:#8d9caf;padding:27px 0}
+  .foot-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:13px}
+  .foot-inner strong{font:700 16px var(--heading);color:#fff}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+  @media(max-width:950px){.navlinks{gap:16px}.hero-grid{gap:35px}h1{font-size:clamp(3.8rem,7vw,6rem)}.profile-img{height:430px}.about-grid{gap:28px}.skills-grid{grid-template-columns:repeat(2,1fr)}.contact-layout{gap:30px}}
+  @media(max-width:680px){.container{width:min(100% - 34px,1170px)}.navline{height:66px}.brand{font-size:19px}.menu-btn{display:flex}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#111827;padding:13px 18px 22px;border-top:1px solid #334155;box-shadow:0 16px 20px #0002}.navlinks.open{display:flex}.navlinks>a{padding:12px 5px}.navlinks .nav-contact{margin-top:9px;text-align:center}.hero{padding:115px 0 70px}.hero-grid{grid-template-columns:1fr;gap:48px}h1{font-size:clamp(4.5rem,16vw,7.3rem)}.hero-copy{font-size:16px}.hero-frame{justify-self:center;width:min(82%,365px)}.profile-img{height:380px;border-radius:0 85px 0 0}.photo-back{border-radius:0 85px 0 0;right:-14px;left:14px;top:14px;bottom:-14px}.photo-stamp{font-size:12px;left:-17px;bottom:25px;padding:12px}.scroll-note{margin-top:45px}.marquee-inner{min-height:58px;gap:18px;font-size:11px}.marquee-inner span:nth-last-child(-n+2){display:none}.section{padding:75px 0}.section-top{display:block}.section-top .subtext{margin-top:16px}.about-grid{grid-template-columns:1fr;gap:25px}.skills-grid,.project-grid{grid-template-columns:1fr}.skill-card{min-height:unset;padding:25px}.project-art{height:205px}.contact{padding:75px 0}.contact-layout{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:10px}.foot-inner{flex-wrap:wrap}.fact-row{grid-template-columns:115px 1fr}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navline">
+      <a class="brand" href="#home" aria-label="Rahul Mozumder homepage">rahul<span class="dot">.</span>dev</a>
+      <button class="menu-btn" type="button" id="menuBtn" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">☰</button>
+      <nav class="navlinks" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#journey">Journey</a><a class="nav-contact" href="#contact">Contact ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div class="intro">Hello, I'm</div>
+          <h1>Rahul <span class="last">Mozumder.</span></h1>
+          <p class="hero-copy">A Software Engineering student at <strong style="color:#fff">Daffodil International University</strong>. I enjoy creating thoughtful websites, exploring technology and turning ideas into useful digital experiences.</p>
+          <div class="hero-cta"><a class="button button-solid" href="#work">Explore my work <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#contact">Let's connect <span aria-hidden="true">→</span></a></div>
+          <div class="scroll-note">Scroll to discover</div>
+        </div>
+        <div class="hero-frame"><div class="photo-back" aria-hidden="true"></div><img class="profile-img" src="assets/rahul-photo.jpg" alt="Rahul Mozumder standing by a balcony railing" width="1536" height="2048" fetchpriority="high"><div class="photo-stamp">DESIGN × CODE ✦</div></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-label="Interest areas"><div class="container marquee-inner"><span>Software Engineering</span><b>✳</b><span>Web Development</span><b>✳</b><span>Creative Problem Solving</span></div></div>
+
+    <section class="section" id="about"><div class="container">
+      <div class="section-top reveal"><div><p class="eyebrow">01 / About</p><h2>Making ideas<br>feel real.</h2></div><p class="subtext">A little about who I am, what I study, and why I enjoy building for the web.</p></div>
+      <div class="about-grid"><div class="about-copy reveal"><p>Hi, I'm Rahul. I'm studying Software Engineering at Daffodil International University, and I'm interested in creating websites that look good, feel intuitive and work smoothly across devices.</p><p>I'm always exploring new techniques, learning from small experiments, and sharpening my programming and design skills one project at a time.</p><div class="about-sign">Rahul Mozumder <span style="color:#76a73c">✳</span></div></div>
+      <div class="fact-list reveal"><div class="fact-row"><span>Name</span><strong>Rahul Mozumder</strong></div><div class="fact-row"><span>University</span><strong>Daffodil International University</strong></div><div class="fact-row"><span>Department</span><strong>Software Engineering</strong></div><div class="fact-row"><span>Interests</span><strong>Development, design &amp; technology</strong></div><div class="fact-row"><span>Based in</span><strong>Bangladesh</strong></div></div></div>
+    </div></section>
+
+    <section class="section skills" id="skills"><div class="container">
+      <div class="section-top reveal"><div><p class="eyebrow">02 / Skills</p><h2>What I'm exploring.</h2></div><p class="subtext">A mix of development foundations, visual thinking, and tools useful for everyday projects.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><div class="skill-icon">&lt;/&gt;</div><h3>Front-end development</h3><p>Building responsive layouts and interactive experiences for the browser.</p><div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
+        <article class="skill-card reveal"><div class="skill-icon">{ }</div><h3>Programming basics</h3><p>Growing my problem-solving skills with core programming concepts.</p><div class="skill-tags"><span>C</span><span>Java</span><span>Python</span></div></article>
+        <article class="skill-card reveal"><div class="skill-icon">◈</div><h3>Design &amp; workflow</h3><p>Thinking about usability while keeping code and project files organised.</p><div class="skill-tags"><span>UI Design</span><span>Git</span><span>VS Code</span></div></article>
+      </div>
+    </div></section>
+
+    <section class="section projects-section" id="work"><div class="container">
+      <div class="section-top reveal"><div><p class="eyebrow">03 / Selected work</p><h2>Ideas in motion.</h2></div><p class="subtext">Example project directions and interface concepts. Replace these with completed coursework and personal builds as you develop them.</p></div>
+      <div class="filter-bar reveal" role="group" aria-label="Filter project concepts"><button class="filter-btn active" data-filter="all" aria-pressed="true">All concepts</button><button class="filter-btn" data-filter="web" aria-pressed="false">Web</button><button class="filter-btn" data-filter="tools" aria-pressed="false">Tools</button><button class="filter-btn" data-filter="student" aria-pressed="false">Student life</button></div>
+      <div class="project-grid">
+        <article class="project reveal" data-category="web"><div class="project-art art-a"><div class="project-index">CONCEPT / 01</div><span>RM.</span></div><div class="project-body"><div class="project-heading"><h3>Developer Portfolio</h3><span class="project-arrow">↗</span></div><p>A personal corner of the internet to showcase background, skills and creative development work.</p><div class="project-kinds"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div></article>
+        <article class="project reveal" data-category="tools"><div class="project-art art-b"><div class="project-index">CONCEPT / 02</div><span>✓</span></div><div class="project-body"><div class="project-heading"><h3>Focus Task Board</h3><span class="project-arrow">↗</span></div><p>A minimal productivity dashboard concept for organising tasks and tracking daily progress.</p><div class="project-kinds"><span>JavaScript</span><span>Dashboard</span><span>UX</span></div></div></article>
+        <article class="project reveal" data-category="tools"><div class="project-art art-c"><div class="project-index">CONCEPT / 03</div><span>°C</span></div><div class="project-body"><div class="project-heading"><h3>Sky Forecast</h3><span class="project-arrow">↗</span></div><p>A weather interface concept with readable forecasts and a simple, mobile-focused layout.</p><div class="project-kinds"><span>API</span><span>JavaScript</span><span>Responsive</span></div></div></article>
+        <article class="project reveal" data-category="tools"><div class="project-art art-d"><div class="project-index">CONCEPT / 04</div><span>৳</span></div><div class="project-body"><div class="project-heading"><h3>Budget Notebook</h3><span class="project-arrow">↗</span></div><p>A concept for logging expenses, grouping spending categories and understanding a monthly budget.</p><div class="project-kinds"><span>Data</span><span>Interface</span><span>Charts</span></div></div></article>
+        <article class="project reveal" data-category="student"><div class="project-art art-e"><div class="project-index">CONCEPT / 05</div><span>EV</span></div><div class="project-body"><div class="project-heading"><h3>Campus Event Desk</h3><span class="project-arrow">↗</span></div><p>An event registration experience imagined for student activities, schedules and participants.</p><div class="project-kinds"><span>Web Forms</span><span>Campus</span><span>UI</span></div></div></article>
+        <article class="project reveal" data-category="student"><div class="project-art art-f"><div class="project-index">CONCEPT / 06</div><span>NT</span></div><div class="project-body"><div class="project-heading"><h3>Class Notes Library</h3><span class="project-arrow">↗</span></div><p>A student-focused resource library concept for organising course notes and study materials.</p><div class="project-kinds"><span>Education</span><span>Web</span><span>Resources</span></div></div></article>
+      </div>
+      <p class="note">Project cards describe example concepts, not verified completed projects or live applications.</p>
+    </div></section>
+
+    <section class="section journey" id="journey"><div class="container">
+      <div class="section-top reveal"><div><p class="eyebrow">04 / Journey</p><h2>Learning, building,<br>improving.</h2></div><p class="subtext">A simple snapshot of my current academic and development journey.</p></div>
+      <div class="timeline">
+        <div class="timeline-item reveal"><div class="timeline-date">NOW</div><div><h3>BSc in Software Engineering</h3><p>Daffodil International University — developing a foundation in programming, software concepts and project work.</p></div></div>
+        <div class="timeline-item reveal"><div class="timeline-date">CURRENT FOCUS</div><div><h3>Front-end &amp; Web Interfaces</h3><p>Learning to create responsive, accessible experiences with HTML, CSS and JavaScript.</p></div></div>
+        <div class="timeline-item reveal"><div class="timeline-date">WHAT'S NEXT</div><div><h3>More real-world projects</h3><p>Improving practical development skills through experimentation, collaboration and hands-on learning.</p></div></div>
+      </div>
+    </div></section>
+
+    <section class="contact" id="contact"><div class="container contact-layout">
+      <div class="reveal"><p class="eyebrow">05 / Say hello</p><h2>Have an idea?<br>Let's talk.</h2><p>Whether you have a project idea, a question or just want to connect, feel free to reach out.</p></div>
+      <div class="contact-links reveal">
+        <a class="contact-link" href="mailto:251-35-050@diu.edu.bd"><span><small>Email address</small><strong>251-35-050@diu.edu.bd</strong></span><b>↗</b></a>
+        <a class="contact-link" href="tel:+8801795841820"><span><small>Phone number</small><strong>01795841820</strong></span><b>↗</b></a>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container foot-inner"><strong>rahul<span style="color:var(--mint)">.</span>dev</strong><span>© <span id="year">2026</span> Rahul Mozumder. Made with HTML, CSS &amp; JavaScript.</span><a href="#home">Back to top ↑</a></div></footer>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const nav=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');menuBtn.textContent=open?'✕':'☰'});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}});
+    document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+      const filter=button.dataset.filter;
+      document.querySelectorAll('[data-filter]').forEach(btn=>{const active=btn===button;btn.classList.toggle('active',active);btn.setAttribute('aria-pressed',String(active))});
+      document.querySelectorAll('.project').forEach(project=>{project.hidden=filter!=='all'&&project.dataset.category!==filter});
+    }));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const reveals=document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.08});reveals.forEach(el=>observer.observe(el));}else reveals.forEach(el=>el.classList.add('visible'));
+  </script>
+</body>
+</html>
